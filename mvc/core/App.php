@@ -1,6 +1,6 @@
 <?php 
     class App {
-        protected $controller = "Home";
+        protected $controller = "home";
         protected $action = "";
         protected $params = [];
         
@@ -14,16 +14,15 @@
 
             require_once './mvc/controllers/' . $this->controller . '.php';
             $this->controller = new $this->controller;
-
+            
             if(isset($arr[1])) {
                 if(method_exists($this->controller, $arr[1])) {
                     $this->action = $arr[1];
                 }
                 unset($arr[1]);
             }
-
-            $this->params = $arr ? array_values($arr) : [];
             
+            $this->params = $arr ? array_values($arr) : [];
             call_user_func_array([$this->controller, $this->action], $this->params);
         }
 
