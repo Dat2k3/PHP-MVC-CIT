@@ -81,7 +81,7 @@ function submitOn() {
     setTimeout(function() {
         notification.classList.remove('action')
         progress.classList.remove('action')
-    }, 2400)
+    }, 2000)
 }
 
 function defaultIP() {

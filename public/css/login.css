@@ -41,7 +41,7 @@
 }
 
 .progress.action:before {
-    animation: progress 2.4s linear forwards;
+    animation: progress 2.0s linear forwards;
 }
 
 @keyframes progress {
@@ -178,6 +178,20 @@ button[type=submit] {
 }
 
 .box .form-login #gg-login {
+    width: 75%;
+    height: 55px;
+    color: white;
+    font: 18px Quicksand;
+    font-weight: 700;
+    background: #493B2B;
+    border-radius: 14px;
+    border: 3px solid #9D8B79;
+    padding: 0;
+    margin-top: 30px;  
+    margin-left: 12.5%;
+}
+
+.box .form-login #gg-login {
     display: flex;
     flex-direction: row;
     margin-top: 0;
@@ -259,6 +273,10 @@ button[type=submit] {
 }
 
 /* FORM NEW PASSWORD */
+.disable {
+    pointer-events:none;
+}
+
 .box-newpw {
     width: 35%;
     height: 400px;
@@ -461,7 +479,7 @@ input[type=text]:focus, input[type=password]:focus {
         font-size: 14px;
     }
 
-    button[type=submit] {
+    button[type=submit], .box .form-login #gg-login {
         height: 50px;
         font-size: 16px;
         margin-top: 18px;
@@ -547,7 +565,7 @@ input[type=text]:focus, input[type=password]:focus {
         font-size: 13px;
     }
 
-    button[type=submit] {
+    button[type=submit], .box .form-login #gg-login {
         height: 46px;
         font-size: 15px;
         margin-top: 16px;
@@ -655,7 +673,7 @@ input[type=text]:focus, input[type=password]:focus {
         border-radius: 9px;
     }
 
-    button[type=submit] {
+    button[type=submit], .box .form-login #gg-login {
         height: 38px;
         font-size: 12px;
         border: 2px solid #9D8B79;
@@ -756,7 +774,7 @@ input[type=text]:focus, input[type=password]:focus {
         height: 24px;
     }
 
-    button[type=submit] {
+    button[type=submit], .box .form-login #gg-login {
         height: 32px;
         font-size: 11px;
         border: 2px solid #9D8B79;
@@ -859,7 +877,7 @@ input[type=text]:focus, input[type=password]:focus {
         margin: 5px auto 5px auto;
     }
 
-    input[type=text], input[type=password], button[type=submit] {
+    input[type=text], input[type=password], button[type=submit], .box .form-login #gg-login {
         height: 13px;
         font-size: 5px;
         border-radius: 4px;
@@ -867,7 +885,7 @@ input[type=text]:focus, input[type=password]:focus {
         padding-left: 6px;
     }
 
-    button[type=submit] {
+    button[type=submit], .box .form-login #gg-login {
         font-size: 5px;
         height: 19px;
         margin-top: 6px;

@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+    $server_host = "http://" . $_SERVER['HTTP_HOST'];
+    $url = $server_host . "/PHP-MVC-CIT/public/";
+?>
+
 <head>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="../public/css/login.css">
+    <!-- <link rel="stylesheet" href="../public/css/login.css"> -->
+    <link rel="stylesheet" type="text/css" href="<?= $url ?>css/login.css">
 </head>
 
 <body>
     <div class="box-newpw">
-        <form id="newpw-form" action="">
+        <form id="newpw-form" method="POST" action="../../changepassword">
             <div class="form-newpw">
                 <div class="email">
                     <p>Email</p>
-                    <input class="email-confirmip" id="email-confirm" type="text" name="email" value="user@gmail.com" disabled>
+                    <input class="email-confirmip disable" id="email-confirm" type="text" name="email" value="<?= $data['email'] ?>">
                 </div>
 
                 <div class="newpassword">
@@ -41,5 +45,4 @@
         <div class="progress"></div>
     </div>
 </body>
-<script src="../public/js/newpassword.js"></script>
-</html>
+<script src="<?= $url ?>js/newpassword.js"></script>

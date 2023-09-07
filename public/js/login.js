@@ -109,9 +109,9 @@ function messageErorr(form, message) {
     if(message == null || message == undefined){
         title.innerHTML = "Success";
         if(form == "login")
-            content.innerHTML = "You have successfully signed in";
+            content.innerHTML = "Please wait a moment to login";
         if(form == "register") 
-            content.innerHTML = "You have successfully signed up";
+            content.innerHTML = "please wait a moment to register";
         submitOn();
     } 
     
@@ -135,7 +135,7 @@ function submitOn() {
     setTimeout(function() {
         notification.classList.remove('action')
         progress.classList.remove('action')
-    }, 2400)
+    }, 2000)
 }
 
 function defaultIP() {

@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+    $server_host = "http://" . $_SERVER['HTTP_HOST'];
+    $url = $server_host . "/PHP-MVC-CIT/public/";
+    require_once './GoogleAPI.php';
+?>
+
 <head>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="<?= $url ?>css/login.css">
 </head>
 
 <body>
@@ -13,7 +17,7 @@
             <div onclick="actionLogin()" class="action action-login activated">LOG IN</div>
         </div>
     
-        <form id="login-form" action="">
+        <form id="login-form" action="../home/login" method="POST">
             <div class="form-login">
                 <div class="username">
                     <p>Username</p>
@@ -32,17 +36,17 @@
                 <button type="submit">LOGIN TO ACCOUNT</button>
 
                 <h2 class="hr-lines">OR</h2>
-
-                <button id="gg-login" type="submit">
+                
+                <button onclick="window.location='<?= $client->createAuthUrl(); ?>'" id="gg-login" type="reset">
                     <div class="gg-icon gg-bg">
-                        <img src="../public/document/image/logo-icon/Glogo 1.png" alt="google">
+                        <img src="<?= $url ?>document/image/logo-icon/Glogo 1.png" alt="google">
                     </div>
                     <p>Sign in with Google</p>
                 </button>
             </div>
         </form>
 
-        <form id="register-form" action="">
+        <form id="register-form" action="../home/register" method="POST">
             <div class="d-none form-register">
                 <div class="email">
                     <p>Email</p>
@@ -82,5 +86,4 @@
         <div class="progress"></div>
     </div>
 </body>
-<script src="../public/js/login.js"></script>
-</html>
+<script src="<?= $url ?>js/login.js"></script>
